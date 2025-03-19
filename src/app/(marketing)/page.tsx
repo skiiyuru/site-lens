@@ -1,10 +1,9 @@
-import Experience from '@/features/marketing/home/experience';
-import { Suspense } from 'react';
+import Experience from '@/app/(marketing)/components/experience';
 
 export default function Home() {
   return (
     <>
-      <header>
+      {/* <header>
         <nav>
           <ul>
             <li>SiteLens</li>
@@ -12,17 +11,16 @@ export default function Home() {
             <li>link 2</li>
           </ul>
         </nav>
-      </header>
-      <main>
-        <section>
-          <h1>SiteLens</h1>
-          <p>Step into your design</p>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Experience />
-          </Suspense>
+      </header> */}
+      <main className="h-full">
+        <section className="h-full">
+          {/* <h1>SiteLens</h1>
+          <p>Step into your design</p> */}
+
+          <Experience />
         </section>
       </main>
-      <footer>All rights reserved</footer>
+      {/* <footer>All rights reserved</footer> */}
     </>
   );
 }
