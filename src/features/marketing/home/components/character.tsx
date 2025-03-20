@@ -1,9 +1,11 @@
+import type { KeyboardControlsEntry } from '@react-three/drei'
+
 import {
   KeyboardControls,
-  type KeyboardControlsEntry,
-} from '@react-three/drei';
-import Ecctrl from 'ecctrl';
-import { useMemo } from 'react';
+
+} from '@react-three/drei'
+import Ecctrl from 'ecctrl'
+import { useMemo } from 'react'
 
 export default function Character() {
   const buttonsMap = useMemo<KeyboardControlsEntry[]>(
@@ -15,7 +17,7 @@ export default function Character() {
       { name: 'jump', keys: ['Space'] },
     ],
     [],
-  );
+  )
 
   return (
     <KeyboardControls map={buttonsMap}>
@@ -33,9 +35,9 @@ export default function Character() {
         {/* Make the box invisible */}
         <mesh scale={0.5}>
           <boxGeometry />
-          <meshBasicMaterial color={'tomato'} transparent opacity={0} />
+          <meshBasicMaterial color="tomato" transparent opacity={0} />
         </mesh>
       </Ecctrl>
     </KeyboardControls>
-  );
+  )
 }

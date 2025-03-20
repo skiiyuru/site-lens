@@ -1,4 +1,4 @@
-import Experience from '@/app/(marketing)/components/experience';
+import Experience from '@/app/(marketing)/components/experience'
 
 export default function Home() {
   return (
@@ -22,5 +22,5 @@ export default function Home() {
       </main>
       {/* <footer>All rights reserved</footer> */}
     </>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import * as THREE from 'three';
-import { useTexture } from '@react-three/drei';
-import { CuboidCollider, RigidBody } from '@react-three/rapier';
+import { useTexture } from '@react-three/drei'
+import { CuboidCollider, RigidBody } from '@react-three/rapier'
+import * as THREE from 'three'
 
 export default function Ground() {
   const props = useTexture({
@@ -10,14 +10,14 @@ export default function Ground() {
     normalMap: '/textures/gravel/Normal.jpg', // will fake the normal orientation and add details to the surface regardless of the subdivision
     roughnessMap: '/textures/gravel/Roughness.jpg',
     // alphaMap for transparent parts (needs transparent=true to work)
-  });
+  })
 
   // Configure texture settings
-  props.map.wrapS = THREE.RepeatWrapping;
-  props.map.wrapT = THREE.RepeatWrapping;
+  props.map.wrapS = THREE.RepeatWrapping
+  props.map.wrapT = THREE.RepeatWrapping
   // // map.minFilter = THREE.LinearFilter // Adjust minification filter
   // // map.magFilter = THREE.LinearFilter // Adjust magnification filter
-  props.map.anisotropy = 4; // Set anisotropy for sharper textures at oblique angles
+  props.map.anisotropy = 4 // Set anisotropy for sharper textures at oblique angles
 
   return (
     <RigidBody type="fixed" colliders={false}>
@@ -33,5 +33,5 @@ export default function Ground() {
       </mesh>
       <CuboidCollider args={[1000, 2, 1000]} position={[0, -2, 0]} />
     </RigidBody>
-  );
+  )
 }

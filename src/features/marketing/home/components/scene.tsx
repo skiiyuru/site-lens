@@ -1,9 +1,10 @@
-import World from '@/features/marketing/home/components/world';
-import { Environment, Sky } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import { Perf } from 'r3f-perf';
+import { Environment, Sky } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Perf } from 'r3f-perf'
 
-const Scene = () => {
+import World from '@/features/marketing/home/components/world'
+
+function Scene() {
   return (
     <Canvas
       className="h-screen"
@@ -24,7 +25,7 @@ const Scene = () => {
 
       <World />
     </Canvas>
-  );
-};
+  )
+}
 
-export default Scene;
+export default Scene

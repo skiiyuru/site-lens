@@ -1,17 +1,17 @@
-/* 
+/*
 OPTIMIZATION:
 
 - https://optimizeglb.com/dashboard (credits required)
 
 */
 
-import { useGLTF } from '@react-three/drei';
-import { RigidBody } from '@react-three/rapier';
+import { useGLTF } from '@react-three/drei'
+import { RigidBody } from '@react-three/rapier'
 
-const PATH = '/models/house-grouped-v2.glb';
+const PATH = '/models/house-grouped-v2.glb'
 
 export default function Building() {
-  const model = useGLTF(PATH);
+  const model = useGLTF(PATH)
 
   return (
     <RigidBody
@@ -22,7 +22,7 @@ export default function Building() {
     >
       <primitive object={model.scene} />
     </RigidBody>
-  );
+  )
 }
 
-useGLTF.preload(PATH);
+useGLTF.preload(PATH)

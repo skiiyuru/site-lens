@@ -1,10 +1,11 @@
-import { Physics } from '@react-three/rapier';
-import Ground from './ground';
-import Building from './building';
-import Character from './character';
-import { Suspense } from 'react';
+import { Physics } from '@react-three/rapier'
+import { Suspense } from 'react'
 
-const World = () => {
+import Building from './building'
+import Character from './character'
+import Ground from './ground'
+
+function World() {
   return (
     <Suspense fallback={null}>
       <Physics>
@@ -13,7 +14,7 @@ const World = () => {
         <Character />
       </Physics>
     </Suspense>
-  );
-};
+  )
+}
 
-export default World;
+export default World

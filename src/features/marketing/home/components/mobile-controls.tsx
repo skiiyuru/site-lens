@@ -1,9 +1,10 @@
-import useDeviceDetection from '@/hooks/useDeviceDetection';
-import { EcctrlJoystick } from 'ecctrl';
+import { EcctrlJoystick } from 'ecctrl'
 
-const MobileControls = () => {
-  const { isMobile } = useDeviceDetection();
-  return isMobile ? <EcctrlJoystick /> : null;
-};
+import useDeviceDetection from '@/hooks/use-device-detection'
 
-export default MobileControls;
+function MobileControls() {
+  const { isMobile } = useDeviceDetection()
+  return isMobile ? <EcctrlJoystick /> : null
+}
+
+export default MobileControls

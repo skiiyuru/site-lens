@@ -1,17 +1,18 @@
-'use client';
+'use client'
 
-import MobileControls from '@/features/marketing/home/components/mobile-controls';
-import Scene from '@/features/marketing/home/components/scene';
-import { Loader } from '@react-three/drei';
+import { Loader } from '@react-three/drei'
 
-const Experience = () => {
+import MobileControls from '@/features/marketing/home/components/mobile-controls'
+import Scene from '@/features/marketing/home/components/scene'
+
+function Experience() {
   return (
     <>
       <Loader />
       <Scene />
       <MobileControls />
     </>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience
