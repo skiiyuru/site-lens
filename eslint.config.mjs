@@ -7,11 +7,11 @@ export default antfu({
   formatters: true,
   react: true,
   // Add Next.js specific configuration
-  extends: [
-    'plugin:@next/next/recommended',
-    'plugin:@next/next/core-web-vitals',
-    'next/typescript',
-  ],
+  // extends: [
+  //   'plugin:@next/next/recommended',
+  //   'plugin:@next/next/core-web-vitals',
+  //   'next/typescript',
+  // ],
   rules: {
     'ts/no-redeclare': 'off',
     'ts/consistent-type-definitions': ['error', 'type'],
