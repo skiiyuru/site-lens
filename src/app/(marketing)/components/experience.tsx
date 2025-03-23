@@ -2,7 +2,7 @@
 
 import { Loader } from '@react-three/drei'
 
-import MobileControls from '@/features/marketing/home/components/mobile-controls'
+// import MobileControls from '@/features/marketing/home/components/mobile-controls'
 import Scene from '@/features/marketing/home/components/scene'
 
 function Experience() {
@@ -10,7 +10,7 @@ function Experience() {
     <>
       <Loader />
       <Scene />
-      <MobileControls />
+      {/* <MobileControls /> */}
     </>
   )
 }

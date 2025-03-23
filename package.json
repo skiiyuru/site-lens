@@ -50,7 +50,7 @@
   "lint-staged": {
     "src/**/*": [
       "pnpm lint",
-      "pnpm test --run --related"
+      "pnpm test related --run"
     ]
   }
 }
