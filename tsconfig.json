@@ -23,7 +23,7 @@
     ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
   // issue with ecctrl: https://github.com/pmndrs/ecctrl/issues/82
-  "strictNullChecks": false
+  // "strictNullChecks": false
 }
