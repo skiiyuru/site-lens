@@ -6,30 +6,71 @@ on:
       - main
 
 jobs:
-  all-cli-checks:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - name:  Install pnpm
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
-
-      - name: Use Node.js
+      
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Install dependencies
+      - name: Install pnpm
         run: pnpm install
 
       - name: Lint files
         run: pnpm lint
 
-      - name: Build application
-        run: pnpm build
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: pnpm install
 
       - name: Run tests
         run: pnpm test
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: pnpm install
+
+      - name: Build application
+        run: pnpm build
